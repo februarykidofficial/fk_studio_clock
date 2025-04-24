@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222222;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: flex-start;
+}
+
+body {
+  background-color: #fefcf3;
+}
+
+#clock {
+  font-size: clamp(2rem, 15vw, 10rem);
+}
+
+#date {
+  font-size: clamp(1rem, 8vw, 3rem);
+}
+
+.container {
+  text-align: flex-start;
+  padding: 2rem;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.container > h2 {
+  font-size: clamp(1rem, 8vw, 3rem);
+  font-weight: 800;
+}
