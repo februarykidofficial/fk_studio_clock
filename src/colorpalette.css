@@ -1,0 +1,36 @@
+.palette-toggle {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    gap: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin-top: 10px;
+    position: absolute; /* So it doesn't disrupt the clock layout */
+    z-index: 10; /* Ensure it's above other elements if needed */
+    background-color: #333; /* Or any background color for the palette */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.color-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.hidden {
+    display: none !important;
+}
