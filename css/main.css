@@ -191,20 +191,20 @@ body {
 }
 
 .open-about {
-    position: absolute;  /* Position the button */
+    position: absolute;
     top: 10px;
     right: 10px;
-    width: 24px;
-    height: 24px;
+    width: 36px;  /* Increased width */
+    height: 36px; /* Increased height */
     border-radius: 100%;
     background-color: #333;
     color: #eee;
     text-align: center;
-    line-height: 24px;
+    line-height: 36px; /* Increased line-height to vertically center text */
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Increased font size */
     z-index: 11;
-    border: 3px solid #262626;
+    border: 10px solid #262626;
 }
 
 .open-about:hover {

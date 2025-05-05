@@ -5,26 +5,35 @@
     background-color: #f0f0f0;
     cursor: pointer;
     font-size: 1em;
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px;
 }
 
 .palette {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-    gap: 10px;
-    width: 80%;
-    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: auto;
+    max-width: 80vw;  /* Add a maximum width */
+    max-height: 50vh; /* Add a maximum height */
     margin-top: 10px;
-    position: absolute; /* Position relative to #about */
+    position: center;
     z-index: 10;
     background-color: #333;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     box-sizing: border-box;
-    left: 0;          /* Start from the left edge of #about */
-    top: 30px;      /* Position from the top of #about */
-    overflow: auto;  /* Add scrollbars if content overflows */
+    left: 0;
+    top: 30px;
+    overflow: auto; /* Add overflow: auto */
+}
+
+.palette-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 30px;
 }
 
 .color-button {
