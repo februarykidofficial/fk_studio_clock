@@ -1,232 +1,217 @@
 html {
-	font-size: 1em;
-	line-height: 1.4;
-	margin: 0;
-	-webkit-text-size-adjust: 100%;
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
 }
-
-
-
 
 body {
-	background-color: #000;
-	background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 34%, rgba(0, 0, 0, 1) 100%);
-	color: #FFAB0F;
-	cursor: default;
-	font-family: 'Roboto Mono', monospace;
-	margin: 0;
+    background-color: #000;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 34%, rgba(0, 0, 0, 1) 100%);
+    color: #FFAB0F;
+    cursor: default;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
 }
 
-
-
 #clock {
-  font-size: 0px;
-  position: relative;
-
+    font-size: 0px;
+    position: relative;
 }
 
 #date {
-  font-size: 60px;
-  position: relative;
-  bottom: 220px;
+    font-size: 60px;
+    position: relative;
+    bottom: 220px;
 }
 
-
-
-
 .container {
-	display: flex;
-	height: 100vh;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .clock {
-	position: relative;
+    position: relative;
 }
 
 @media (orientation: portrait) {
-	.clock {
-		width: 90vw;
-		height: 90vw;
-	}
+    .clock {
+        width: 90vw;
+        height: 90vw;
+    }
 }
 
 @media (orientation: landscape) {
-	.clock {
-		width: 90vh;
-		height: 90vh;
-	}
+    .clock {
+        width: 90vh;
+        height: 90vh;
+    }
 }
 
 .clock > .pips {
-	height: 100%;
+    height: 100%;
 }
 
 .clock > .pips > .minutes,
 .clock > .pips > .seconds {
-	position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .clock > .pips > .minutes {
-	margin: 4%;
+    margin: 4%;
 }
 
 .clock > .digital {
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .clock > .digital > .chunk {
-	align-items: center;
-	display: flex;
-	flex: 1 1 0;
-	justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
 }
 
 .clock > .digital > .chunk.shrink {
-	flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 .clock > .digital > .chunk.top {
-	align-items: start;
+    align-items: start;
 }
 
 .clock > .digital .time {
-	display: flex;
-	font-size: 20vh;
+    display: flex;
+    font-size: 20vh;
 }
 
 .clock > .digital .time .hours::after {
-	content: ":";
+    content: ":";
 }
 
 .clock > .digital .seconds {
-	font-size: 15vh;
+    font-size: 15vh;
 }
 
 @media (orientation: portrait) {
-	.clock > .digital .time {
-		font-size: 20vw;
-	}
+    .clock > .digital .time {
+        font-size: 20vw;
+    }
 
-	.clock > .digital .seconds {
-		font-size: 15vw;
-	}
+    .clock > .digital .seconds {
+        font-size: 15vw;
+    }
 }
 
 .pos {
-	height: 50%;
-	position: absolute;
-		top: 0;
-		right: 50%;
-		bottom: 50%;
-		left: 50%;
-	transform-origin: bottom;
-	width: 0;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    width: 0;
 }
 
 .ticking {
-	color: #262626;
+    color: #262626;
 }
 
 .pip {
-	background-color: currentColor;
-	border-radius: 100%;
-	box-shadow: 0 0 0 0.15vh #FFFFFF;
-	margin-left: -1vh;
-	width: 2vh;
+    background-color: currentColor;
+    border-radius: 100%;
+    box-shadow: 0 0 0 0.15vh #FFFFFF;
+    margin-left: -1vh;
+    width: 2vh;
 }
 
 @media (orientation: portrait) {
-	.pip {
-		margin-left: -1vw;
-		width: 2vw;
-	}
+    .pip {
+        margin-left: -1vw;
+        width: 2vw;
+    }
 }
 
 .pip::after {
-	content: "";
-	display: block;
-	padding-bottom: 100%;
+    content: "";
+    display: block;
+    padding-bottom: 100%;
 }
 
-.open-about {
-	background-color: #333;
-	border: 3px solid #262626;
-	border-radius: 100%;
-	cursor: pointer;
-	font-size: 20px;
-	height: 24px;
-	line-height: 24px;
-	position: absolute;
-		right: 10px;
-		bottom: 10px;
-	text-align: center;
-	width: 24px;
+#about {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: #eee;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    display: none;
+    /* max-width: 80%;  Remove this line */
+    width: auto;      /* Change this from fit-content to auto */
+    min-width: 500px;  /* Add a minimum width */
 }
 
-.about {
-	align-items: center;
-	background-color: #333;
-	border: 3px solid #262626;
-	border-radius: 10px;
-	color: #dcddde;
-	display: none;
-	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-	font-size: 14px;
-	max-width: 420px;
-	margin-left: 10px;
-	opacity: 0;
-	position: absolute;
-		right: 10px;
-		bottom: 10px;
-	z-index: 3;
-	transition: opacity 0.2s;
+#about.open {
+    display: block;
+    opacity: 1;
 }
 
-.about.open {
-	display: flex;
-}
-
-.about p {
-	margin: 10px;
-	line-height: 1.21;
+.about .info {
+    margin-bottom: 20px;
 }
 
 .about .byline {
-	text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.about .byline strong {
-	font-weight: 500;
+.about .shields {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.about > .shields {
-	display: flex;
-	flex-direction: column;
+.open-about {
+    position: absolute;  /* Position the button */
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    font-size: 1.2em;
+    z-index: 11;
+    border: 3px solid #262626;
 }
 
-.about > .shields > a {
-	margin: 10px 10px 0;
+.open-about:hover {
+    background-color: #444;
+    border-color: #333;
 }
 
-.about > .shields > a:first-child {
-	margin-top: 0;
-}
-
-.about > .shields img {
-	display: block;
-}
 
 .pos-1 { transform: rotate(6deg) }
 .pos-2 { transform: rotate(12deg) }

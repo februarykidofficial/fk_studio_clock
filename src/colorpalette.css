@@ -15,12 +15,16 @@
     width: 80%;
     max-width: 500px;
     margin-top: 10px;
-    position: absolute; /* So it doesn't disrupt the clock layout */
-    z-index: 10; /* Ensure it's above other elements if needed */
-    background-color: #333; /* Or any background color for the palette */
+    position: absolute; /* Position relative to #about */
+    z-index: 10;
+    background-color: #333;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    left: 0;          /* Start from the left edge of #about */
+    top: 30px;      /* Position from the top of #about */
+    overflow: auto;  /* Add scrollbars if content overflows */
 }
 
 .color-button {

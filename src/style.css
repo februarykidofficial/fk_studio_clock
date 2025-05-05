@@ -4,13 +4,12 @@
   box-sizing: border-box;
   color: #222222;
   font-family: sans-serif;
-  display: flex;
-  justify-content: flex-start;
 }
 
 body {
   background-color: #fefcf3;
 }
+
 
 #clock {
   font-size: clamp(2rem, 15vw, 10rem);
@@ -32,4 +31,16 @@ body {
 .container > h2 {
   font-size: clamp(1rem, 8vw, 3rem);
   font-weight: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222222;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #fefcf3;
 }

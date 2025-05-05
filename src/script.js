@@ -28,7 +28,7 @@ displayTime();
 
 
 
-const paletteToggle = document.querySelector('.palette-toggle');
+const paletteToggle = document.getElementById('open-about'); //  Correct selector
 const palette = document.querySelector('.palette');
 
 //  Array of 100 specific colors
@@ -82,7 +82,7 @@ colors.forEach(color => {
     if (palette) {
         palette.appendChild(button);
     } else {
-        console.error("Palette element not found in src/script.js!");
+        console.error("Palette element not found!");
     }
 });
 
@@ -92,5 +92,5 @@ if (paletteToggle) {
         palette.classList.toggle('hidden');
     });
 } else {
-    console.error("paletteToggle element not found in src/script.js! Check your HTML.");
+        console.error("paletteToggle element not found! Check your HTML.");
 }
