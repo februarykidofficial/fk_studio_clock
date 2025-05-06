@@ -13,7 +13,6 @@
     <meta name="theme-color" content="#333333">
 </head>
 <body>
-
     <div class="container">
         <div class="clock">
             <div class="pips">
@@ -112,33 +111,17 @@
                 </div>
             </div>
         </div>
-
-
-        <div id="open-about" class="open-about">⚙️</div>
-        <div id="about" class="about">
-            <div class="info">
-
-            <div class="palette hidden"></div>
-
-
+        <div class="controls-container">
+            <div id="open-about" class="open-about">⚙️
+                <div id="about" class="about">
+                    <div class="info">
+                        <div class="palette hidden"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/main.js"></script>
     <script src="src/script.js"></script>
-    <script>
-        // This script runs *before* any external scripts, but after the button is defined
-        const paletteToggle = document.querySelector('.palette-toggle');
-        const palette = document.querySelector('.palette');
-
-        if (paletteToggle) {
-            console.log("Palette toggle button found!");
-            paletteToggle.addEventListener('click', () => {
-                console.log("Palette toggle button clicked!");
-                palette.classList.toggle('hidden');
-            });
-        } else {
-            console.error("Palette toggle button NOT found!");
-        }
-    </script>
 </body>
 </html>

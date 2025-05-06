@@ -31,14 +31,23 @@ displayTime();
 document.addEventListener('DOMContentLoaded', () => {
     const paletteToggle = document.getElementById('open-about');
     const palette = document.querySelector('.palette');
+    const controlsContainer = document.querySelector('.controls-container');
 
     // Check if elements exist before adding listeners
-    if (paletteToggle && palette) {
-        paletteToggle.addEventListener('click', () => {
-            palette.classList.toggle('hidden');
+    if (paletteToggle && palette && controlsContainer) {
+        controlsContainer.addEventListener('mouseenter', () => {
+            palette.classList.remove('hidden');
         });
+
+        controlsContainer.addEventListener('mouseleave', (event) => {
+            if (!palette.contains(event.relatedTarget) && event.relatedTarget !== paletteToggle) {
+                palette.classList.add('hidden');
+            }
+        });
+
+
     } else {
-        console.error("Palette toggle button or palette element not found!");
+        console.error("Palette toggle button, palette element, or controlsContainer not found!");
         return; // Stop script execution if elements are missing
     }
 
@@ -54,18 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return `#${(r < 16 ? '0' : '') + r.toString(16)}${(g < 16 ? '0' : '') + g.toString(16)}${(b < 16 ? '0' : '') + b.toString(16)}`;
     }
 
-    // Array of base colors (20 columns) -  You can adjust these as needed
+    // Array of base colors (20 columns)
     const baseColors = [
         '#FF0000', '#FF4500', '#FF7F00', '#FFA500', '#FFD700', '#FFFF00', '#ADFF2F', '#7FFF00',
         '#00FF00', '#00FA9A', '#00FF7F', '#00FFFF', '#00BFFF', '#0000FF', '#4169E1', '#8A2BE2',
         '#9932CC', '#D02090', '#FF1493', '#FF00FF'
     ];
 
-    let colors = [];  // Will hold the 2D array of shades
-
+    let colors = [];
     for (let i = 0; i < numberOfColumns; i++) {
         const columnShades = [];
-        const baseColor = baseColors[i % baseColors.length]; // Cycle through base colors
+        const baseColor = baseColors[i % baseColors.length];
         for (let j = 0; j < numberOfRows; j++) {
             columnShades.push(generateShade(baseColor, j, numberOfRows));
         }
